@@ -15,7 +15,7 @@ class CredentialsRepository(private val api: AuthService) {
             return ApiResponse.Success(response.token)
         }catch (e: HttpException){
             if (e.code()==400){
-                return ApiResponse.ErrorWithMessage("Se esta validado datos")
+                return ApiResponse.ErrorWithMessage("Los datos no son validos")
             }
             return ApiResponse.Error(e)
         }catch (e: IOException){
