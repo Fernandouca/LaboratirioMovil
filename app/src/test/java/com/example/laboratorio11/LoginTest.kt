@@ -19,7 +19,7 @@ class LoginTest {
 
     @Before
     fun setup(){
-        mockWebServer =  MockWebServer()
+        mockWebServer = MockWebServer()
 
         authService = Retrofit.Builder()
             .baseUrl(mockWebServer.url("/"))
